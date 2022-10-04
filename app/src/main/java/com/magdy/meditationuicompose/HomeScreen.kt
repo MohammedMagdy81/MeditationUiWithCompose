@@ -75,15 +75,17 @@ fun HomeScreen() {
             )
 
         }
-        BottomMenu(items = listOf(
+        BottomMenu(
+            items = listOf(
 
-            BottomMenuContent("Home",R.drawable.ic_home),
-            BottomMenuContent("Meditate",R.drawable.ic_bubble),
-            BottomMenuContent("Sleep",R.drawable.ic_moon),
-            BottomMenuContent("Music",R.drawable.ic_music),
-            BottomMenuContent("Profile",R.drawable.ic_profile),
+                BottomMenuContent("Home", R.drawable.ic_home),
+                BottomMenuContent("Meditate", R.drawable.ic_bubble),
+                BottomMenuContent("Sleep", R.drawable.ic_moon),
+                BottomMenuContent("Music", R.drawable.ic_music),
+                BottomMenuContent("Profile", R.drawable.ic_profile),
 
-        ), modifier = Modifier.align(Alignment.BottomCenter))
+                ), modifier = Modifier.align(Alignment.BottomCenter)
+        )
 
 
     }
@@ -222,8 +224,9 @@ fun FeatureItem(
         modifier = Modifier
             .padding(8.dp)
             .aspectRatio(1f)
-            .background(feature.darkColor)
             .clip(RoundedCornerShape(12.dp))
+            .background(feature.darkColor)
+
     ) {
 
         val width = constraints.maxWidth
@@ -347,7 +350,7 @@ fun BottomMenu(
                 activeTextLightColor = activeTextLightColor,
                 inActiveTextLightColor = inActiveTextLightColor,
             ) {
-                    selectedItemIndex= index
+                selectedItemIndex = index
             }
         }
     }
